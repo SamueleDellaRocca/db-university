@@ -82,9 +82,9 @@
         <h1>QUERY CON JOIN</h1>
         <h2>1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia</h2>
         SELECT * <br>
-        FROM `students` <br>
-        JOIN degrees <br>
-        WHERE degrees.name LIKE '%economia'
+        FROM `students` JOIN degrees <br>
+        ON students.degree_id = degrees.id <br>
+        WHERE degrees.name LIKE 'Corso di Laurea in Economia'
 
         <h2>2. Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze</h2>
         SELECT * <br>
@@ -97,6 +97,10 @@
         FROM `courses` <br>
         JOIN teachers <br>
         WHERE teachers.id = 44
+
+        <h2>4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il
+            relativo dipartimento, in ordine alfabetico per cognome e nome
+        </h2>
     </div>
 
 </body>
