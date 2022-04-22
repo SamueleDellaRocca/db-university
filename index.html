@@ -71,6 +71,11 @@
         SELECT exam_id, SUM(vote) / COUNT(exam_id) <br>
         FROM `exam_student` <br>
         GROUP BY exam_id
+
+        <h2>4. Contare quanti corsi di laurea ci sono per ogni dipartimento</h2>
+        SELECT department_id, COUNT(id) <br>
+        FROM `degrees` <br>
+        GROUP BY department_id
     </div>
 
 </body>
