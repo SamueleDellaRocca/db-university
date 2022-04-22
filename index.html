@@ -78,6 +78,15 @@
         GROUP BY department_id
     </div>
 
+    <div>
+        <h1>QUERY CON JOIN</h1>
+        <h2>1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia</h2>
+        SELECT * <br>
+        FROM `students` <br>
+        JOIN degrees <br>
+        WHERE degrees.name LIKE '%economia'
+    </div>
+
 </body>
 
 </html>
