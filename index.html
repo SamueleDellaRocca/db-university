@@ -117,6 +117,18 @@
         ON degrees.id = courses.degree_id <br>
         JOIN departments <br>
         ON departments.id = degrees.department_id
+
+        <h2>6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54) </h2>
+        SELECT * <br>
+        FROM `teachers` JOIN course_teacher <br>
+        ON teachers.id = course_teacher.teacher_id <br>
+        JOIN courses <br>
+        ON courses.id = course_teacher.course_id <br>
+        JOIN degrees <br>
+        ON degrees.id = courses.degree_id <br>
+        JOIN departments <br>
+        ON degrees.department_id = departments.id <br>
+        WHERE departments.name LIKE 'Dipartimento di Matematica'
     </div>
 
 </body>
