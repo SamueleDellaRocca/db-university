@@ -110,6 +110,13 @@
         JOIN departments <br>
         ON degrees.department_id = departments.id <br>
         ORDER BY students.`name` ASC, `students`.`surname` ASC
+
+        <h2>5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti</h2>
+        SELECT * <br>
+        FROM `degrees` JOIN courses <br>
+        ON degrees.id = courses.degree_id <br>
+        JOIN departments <br>
+        ON departments.id = degrees.department_id
     </div>
 
 </body>
