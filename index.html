@@ -91,6 +91,12 @@
         FROM `courses` <br>
         JOIN departments <br>
         WHERE departments.name LIKE '%Neuroscienze'
+
+        <h2>3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44) </h2>
+        SELECT * <br>
+        FROM `courses` <br>
+        JOIN teachers <br>
+        WHERE teachers.id = 44
     </div>
 
 </body>
