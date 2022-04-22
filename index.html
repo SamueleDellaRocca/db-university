@@ -64,7 +64,14 @@
 
         <h2>2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio</h2>
         SELECT COUNT(id), `office_address` <br>
-        FROM `teachers` <br2 GROUP BY `office_address` </div>
+        FROM `teachers` <br>
+        GROUP BY `office_address`
+
+        <h2>3. Calcolare la media dei voti di ogni appello d'esame</h2>
+        SELECT exam_id, SUM(vote) / COUNT(exam_id) <br>
+        FROM `exam_student` <br>
+        GROUP BY exam_id
+    </div>
 
 </body>
 
